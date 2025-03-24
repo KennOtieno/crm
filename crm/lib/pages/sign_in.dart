@@ -6,16 +6,22 @@ class SignInPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[300],
-      body: SafeArea(
-        child: Center(
-          child: Column(
-            children: [
-              
-            ],
-          )
-        ),)
-    );
-  }
+      backgroundColor: color.grey[300],
+      body: Column(children: {
+        // Logo
 
+        // Welcome Back
+
+        // E-mail and Password TextFields
+
+        // Forgot Password
+
+        // Sign In button
+
+        // Continue with Google or IOS
+
+        // Sign Up Now
+      },),
+    )
+  }
 }
