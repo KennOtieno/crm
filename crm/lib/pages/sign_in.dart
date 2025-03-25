@@ -4,24 +4,42 @@ class SignInPage extends StatelessWidget {
   const SignInPage({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext: context) {
     return Scaffold(
-      backgroundColor: color.grey[300],
-      body: Column(children: {
-        // Logo
+      backgroundColor: Colors.grey(300),
+      body: SafeArea(
+        child: Center(
+          child: Column(
+            children: [
+              const SizedBox(height: 50,),
 
-        // Welcome Back
+              // Below is the intended UI
 
-        // E-mail and Password TextFields
+              // Padlock logo - to represent Sign In
+              const Icon(
+                Icons.lock,
+                size: 100,
+              )
 
-        // Forgot Password
+              const SizedBox(height: 50),
 
-        // Sign In button
+              // Welcome back Sign In Text
 
-        // Continue with Google or IOS
+              // E-mail Text Field
 
-        // Sign Up Now
-      },),
+              //  Passwoed TextField
+
+              // Forgot Password?
+
+              // Sign In button
+
+              // Continue with Google or IOS option
+
+              // Don't have an account? Sign UP.
+            ],
+          ),
+        )),
     )
+
   }
 }
