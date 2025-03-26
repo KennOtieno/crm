@@ -20,15 +20,15 @@ class SignInPage extends StatelessWidget {
           child: Column(
             children: [
               const SizedBox(height: 50),
-              
+
               // Padlock logo - to represent Sign In
               const Icon(
                 Icons.lock,
                 size: 100,
               ),
-            
+
               const SizedBox(height: 50),
-            
+
               // Welcome back Sign In Text
               Text(
                 'Welcome back. Sign In.',
@@ -37,9 +37,9 @@ class SignInPage extends StatelessWidget {
                   fontSize: 16,
                 ),
               ),
-            
+
               const SizedBox(height: 25),
-            
+
               // E-mail Text Field
               MyTextField(
                 controller: emailController,
@@ -55,13 +55,27 @@ class SignInPage extends StatelessWidget {
                 hintText: 'Password',
                 obscureText: true,
               ),
-            
+
+              const SizedBox(height: 10),
+
               // Forgot Password?
-            
+              Padding(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 25.0,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Text(
+                            'Forgot Password?',
+                            style: TextStyle(color: Colors.grey[600]),
+                          )
+                        ],
+                      )))
+
               // Sign In button
-            
+
               // Continue with Google or IOS option
-            
+
               // Don't have an account? Sign UP.
             ],
           ),
