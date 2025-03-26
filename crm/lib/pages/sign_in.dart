@@ -3,6 +3,10 @@ import 'package:flutter/material.dart';
 class SignInPage extends StatelessWidget {
   const SignInPage({super.key});
 
+  // Text Editing controller
+  final emailController = TextEditingController();
+  final passwordContoller = TextEditingController();
+
   @override
   Widget build(BuildContext = context) {
     return Scaffold(
@@ -36,24 +40,14 @@ class SignInPage extends StatelessWidget {
                   const SizedBox(height: 25),
                 
                   // E-mail Text Field
-                 MyTextField,
+                 MyTextField(),
+                 controller: emailController,
+                 hintText: 'Email Address.'
+                 obscureText: false,
 
                   //  Password TextField
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 25.0,)
-                  child: TextField(
-                    decoration: InputDecoration(
-                      enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white),
-                      ),
-                      focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.grey.shade400),
-                      )
-                      fillColor: Colors.grey.shade200,
-                      filled: true
-                    ),
-                  )
-                  )
+                  MyTextField(),
+                  controller: passwordController,
                 
                   // Forgot Password?
                 
