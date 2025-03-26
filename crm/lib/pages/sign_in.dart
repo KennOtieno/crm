@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:crm/components/my_textfield.dart';
+import 'package:crm/components/my_button.dart';
 
 class SignInPage extends StatelessWidget {
   SignInPage({super.key}) {
@@ -10,6 +11,9 @@ class SignInPage extends StatelessWidget {
 
   late final TextEditingController emailController;
   late final TextEditingController passwordController;
+
+  // Sign User In
+  void signUserIn() {}
 
   @override
   Widget build(BuildContext context) {
@@ -61,7 +65,7 @@ class SignInPage extends StatelessWidget {
               // Forgot Password?
               Padding(
                   padding: const EdgeInsets.symmetric(
-                      horizontal: 25.0,
+                      horizontal: 25.0),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
@@ -70,9 +74,15 @@ class SignInPage extends StatelessWidget {
                             style: TextStyle(color: Colors.grey[600]),
                           )
                         ],
-                      )))
+                      ))
+
+                      const SizedBox(height: 25),
 
               // Sign In button
+              MyButton(
+                onTap: signUserIn,
+              ),
+              const SizedBox(height: 50),
 
               // Continue with Google or IOS option
 
