@@ -84,7 +84,35 @@ class SignInPage extends StatelessWidget {
               ),
               const SizedBox(height: 50),
 
-              // Continue with Google or IOS option
+              // 'Or Continue With' Text, Divided by Divider
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Divider(
+                        thickness: 0.5,
+                        color: Colors.grey,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                      child: Text(
+                        'Or Continue with',
+                        style: TextStyle(color: Colors.grey),
+                        ),
+                    ),
+                    Expanded(
+                      child: Divider(
+                        thickness: 0.5,
+                        color: Colors.grey,
+                      ) 
+                      )
+                  ],
+                ),
+              )
+
+              // Google and IOS logo for signing In
 
               // Don't have an account? Sign UP.
             ],
