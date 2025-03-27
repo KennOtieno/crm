@@ -113,6 +113,12 @@ class SignInPage extends StatelessWidget {
               )
 
               // Google and IOS logo for signing In
+              Row(
+                children: [
+                  // Google Logo
+                  Image.asset('lib/images/google.png')
+                ],
+              )
 
               // Don't have an account? Sign UP.
             ],
