@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:crm/components/my_textfield.dart';
 import 'package:crm/components/my_button.dart';
+import 'package:crm/components/a_square_tile.dart';
 
 class SignInPage extends StatelessWidget {
   SignInPage({super.key}) {
@@ -116,7 +117,11 @@ class SignInPage extends StatelessWidget {
               Row(
                 children: [
                   // Google Logo
-                  Image.asset('lib/images/google.png')
+                  ASquareTile(imagePath: 'lib/images/google.png'),
+                  const SizedBox(width: 10),
+
+                  // IOS Logo
+                  ASquareTile(imagePath: 'lib/images/ios.png')
                 ],
               )
 
