@@ -66,19 +66,19 @@ class SignInPage extends StatelessWidget {
 
               // Forgot Password?
               Padding(
-                  padding: const EdgeInsets.symmetric(
-                      horizontal: 25.0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Text(
-                            'Forgot Password?',
-                            style: TextStyle(color: Colors.grey[600]),
-                          )
-                        ],
-                      ))
+                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    Text(
+                      'Forgot Password?',
+                      style: TextStyle(color: Colors.grey[600]),
+                    )
+                  ],
+                ),
+              ),
 
-                      const SizedBox(height: 25),
+              const SizedBox(height: 25),
 
               // Sign In button
               MyButton(
@@ -87,8 +87,8 @@ class SignInPage extends StatelessWidget {
               const SizedBox(height: 50),
 
               // 'Or Continue With' Text, Divided by Divider
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 25.0),
                 child: Row(
                   children: [
                     Expanded(
@@ -98,28 +98,27 @@ class SignInPage extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                      padding: EdgeInsets.symmetric(horizontal: 10.0),
                       child: Text(
                         'Or Continue with',
                         style: TextStyle(color: Colors.grey),
-                        ),
+                      ),
                     ),
                     Expanded(
-                      child: Divider(
-                        thickness: 0.5,
-                        color: Colors.grey,
-                      ) 
-                      )
+                        child: Divider(
+                      thickness: 0.5,
+                      color: Colors.grey,
+                    ))
                   ],
                 ),
-              )
+              ),
 
               // Google and IOS logo for signing In
-              Row(
+              const Row(
                 children: [
                   // Google Logo
                   ASquareTile(imagePath: 'lib/images/google.png'),
-                  const SizedBox(width: 10),
+                  SizedBox(width: 10),
 
                   // IOS Logo
                   ASquareTile(imagePath: 'lib/images/ios.png')
@@ -129,19 +128,19 @@ class SignInPage extends StatelessWidget {
               const SizedBox(height: 50),
 
               // Don't have an account? Sign UP.
-              Row(
+              const Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
                     'Dont have an account?',
                     style: TextStyle(color: Colors.grey),
-                    ),
-                  const SizedBox(width: 4),
-                  const Text(
+                  ),
+                  SizedBox(width: 4),
+                  Text(
                     'Register now',
-                    style: TextStyle(color: Colors.blue,fontWeight: FontWeight.bold),
-                    
-                    ),
+                    style: TextStyle(
+                        color: Colors.blue, fontWeight: FontWeight.bold),
+                  ),
                 ],
               )
             ],
