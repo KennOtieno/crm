@@ -23,6 +23,7 @@ class SignInPage extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               const SizedBox(height: 50),
 
@@ -123,9 +124,26 @@ class SignInPage extends StatelessWidget {
                   // IOS Logo
                   ASquareTile(imagePath: 'lib/images/ios.png')
                 ],
-              )
+              ),
+
+              const SizedBox(height: 50),
 
               // Don't have an account? Sign UP.
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Dont have an account?',
+                    style: TextStyle(color: Colors.grey),
+                    ),
+                  const SizedBox(width: 4),
+                  const Text(
+                    'Register now',
+                    style: TextStyle(color: Colors.blue,fontWeight: FontWeight.bold),
+                    
+                    ),
+                ],
+              )
             ],
           ),
         ),
