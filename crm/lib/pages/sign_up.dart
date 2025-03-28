@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:crm/components/my_textfield.dart';
+import 'package:crm/components/button2.dart';
 
 class SignUpPage extends StatelessWidget {
   const SignUpPage({super.key}); {
@@ -12,6 +13,9 @@ class SignUpPage extends StatelessWidget {
   late final TextEditingController emailController;
   late final TextEditingController passwordController;
   late final TextEditingController confirmpasswordController;
+
+  // Declare User Sign Up
+  signUserUp() {}
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +43,7 @@ class SignUpPage extends StatelessWidget {
                 obscureText: false,
               ),
 
-              const SizedBox(10),
+              const SizedBox(height: 10),
 
               // Input Password Text Field
               MyTextField(
@@ -48,20 +52,36 @@ class SignUpPage extends StatelessWidget {
                   obscureText: true,
                   ),
 
-                  const SizedBox(10),
+                  const SizedBox(height: 10),
 
               // Confirm Password Text Field
               MyTextField(
                 controller: confirmpasswordController,
                  hintText: 'Confirm Password.',
                   obscureText: true,
-                  )
+                  ),
 
-                  const SizedBox(10),
+                  const SizedBox(height: 10),
 
               // Sign Up Button
+              Button2(
+                onTap: signUserUp,
+              )
+
+              const SizedBox(height: 10),
 
               // Have ann account? Sign IN.
+              Text(
+                'Have an account?'
+                style: TextStyle(color: Colors.grey),
+              )
+              const SizedBox(width: 4),
+              Text(
+                'Sign In',
+                style: TextStyle(
+                  color: Colors.blue, fontWeight: FontWeight.bold
+                ),
+              )
             ],
           ),
         ) 
