@@ -10,9 +10,9 @@ class SignUpPage extends StatelessWidget {
     confirmpasswordController = TextEditingController();
   }
 
-  late final TextEditingController emailController;
-  late final TextEditingController passwordController;
-  late final TextEditingController confirmpasswordController;
+   final TextEditingController emailController;
+   final TextEditingController passwordController;
+   final TextEditingController confirmpasswordController;
 
   // Declare User Sign Up
   signUserUp() {}
@@ -28,13 +28,13 @@ class SignUpPage extends StatelessWidget {
               const SizedBox(height: 50),
 
               // Text Saying 'Welcome. Sign Up.
-              Text('Hey, Sign Up.',
+              const Text('Hey, Sign Up.',
               style: TextStyle(color: Colors.grey,
               fontSize: 16,
               ),
               ),
 
-              const SizedBox(25),
+              const SizedBox(height: 25),
 
               // Input E-mail Address Text Field
               MyTextField(
@@ -66,17 +66,17 @@ class SignUpPage extends StatelessWidget {
               // Sign Up Button
               Button2(
                 onTap: signUserUp,
-              )
+              ),
 
               const SizedBox(height: 10),
 
               // Have ann account? Sign IN.
-              Text(
+              const Text(
                 'Have an account?'
                 style: TextStyle(color: Colors.grey),
-              )
+              ),
               const SizedBox(width: 4),
-              Text(
+              const Text(
                 'Sign In',
                 style: TextStyle(
                   color: Colors.blue, fontWeight: FontWeight.bold
@@ -86,6 +86,6 @@ class SignUpPage extends StatelessWidget {
           ),
         ) 
       )
-      ),
+      );
   }
 }
