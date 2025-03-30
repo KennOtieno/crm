@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:crm/components/my_textfield.dart';
-import 'package:crm/components/button2.dart';
+import 'package:crm/components/my_second_button.dart';
 
 class SignUpPage extends StatelessWidget {
   const SignUpPage({super.key}); {
@@ -64,7 +64,7 @@ class SignUpPage extends StatelessWidget {
                   const SizedBox(height: 10),
 
               // Sign Up Button
-              Button2(
+              MySecondButton(
                 onTap: signUserUp,
               ),
 
@@ -72,7 +72,7 @@ class SignUpPage extends StatelessWidget {
 
               // Have ann account? Sign IN.
               const Text(
-                'Have an account?'
+                'Have an account?',
                 style: TextStyle(color: Colors.grey),
               ),
               const SizedBox(width: 4),
