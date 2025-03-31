@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 import 'pages/sign_in.dart';
+import 'package:supabase_flutter/supabase_flutter.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding();
+  await Supabase.initialize(
+    url: ,
+    anonKey: 
+  );
+  
   runApp(const MyApp());
 }
 
