@@ -8,26 +8,22 @@ class Authentication extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return StreamBuilder<AuthState>(
-        stream: null,
-        builder: (context, snapshot) {
-          return Scaffold(
-            body: StreamBuilder(
-                stream: Supabase.instance.client.auth.onAuthStateChange,
-                builder: (context, snapshot) {
-                  if (snapshot.connectionState == ConnectionState.waiting) {
-                    return const Center(child: CircularProgressIndicator());
-                  }
-                  final session = snapshot.data?.session;
+    return Scaffold(
+      body: StreamBuilder(
+          stream: Supabase.instance.client.auth.onAuthStateChange,
+          builder: (context, snapshot) {
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return const Center(child: CircularProgressIndicator());
+            }
+            final session = snapshot.data?.session;
 
-                  // If the user is Signed In, go to Home Page. Else, remain on Sign In Page
-                  if (session != null) {
-                    return const HomePage();
-                  } else {
-                    return SignInPage();
-                  }
-                }),
-          );
-        });
+            // If the user is Signed In, go to Home Page. Else, remain on Sign In Page
+            if (session != null) {
+              return const HomePage();
+            } else {
+              return SignInPage();
+            }
+          }),
+    );
   }
 }
