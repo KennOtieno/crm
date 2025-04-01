@@ -1,6 +1,7 @@
 import 'package:crm/pages/sign_in.dart';
 import 'package:flutter/material.dart';
 import 'package:supabase_flutter/supabase_flutter.dart';
+import 'package:crm/pages/home.dart';
 
 class Authentication extends StatelessWidget {
   const Authentication({super.key});
@@ -16,6 +17,7 @@ class Authentication extends StatelessWidget {
             }
             final session = snapshot.data?.session;
 
+            // If the user is Signed In, go to Home Page. Else, remain on Sign In Page
             if (session != null) {
               return HomePage();
             } else {
